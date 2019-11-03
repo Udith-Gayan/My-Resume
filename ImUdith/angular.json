@@ -117,8 +117,17 @@
               "devServerTarget": "ImUdith:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/ImUdith",
+            "netlifyToken": "c92b4d17096c4ebf443861e30fea60bb7dc39b7e9745f9aa18714535b0827de2",
+            "siteId": "c2e6504a-e57c-47ff-8e16-7ffdbbfb57f8"
+          }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ImUdith"
 }
