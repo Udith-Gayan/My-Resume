@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to ImUdith!');
+    expect(page.getTitleText()).toEqual('personal-portfoli-angular app is running!');
   });
 
   afterEach(async () => {

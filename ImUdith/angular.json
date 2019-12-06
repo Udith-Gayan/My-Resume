@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ImUdith": {
+    "personal-portfoli-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ImUdith",
+            "outputPath": "dist/personal-portfoli-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -54,6 +54,11 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
@@ -62,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ImUdith:build"
+            "browserTarget": "personal-portfoli-angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ImUdith:build:production"
+              "browserTarget": "personal-portfoli-angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ImUdith:build"
+            "browserTarget": "personal-portfoli-angular:build"
           }
         },
         "test": {
@@ -110,24 +115,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ImUdith:serve"
+            "devServerTarget": "personal-portfoli-angular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ImUdith:serve:production"
+              "devServerTarget": "personal-portfoli-angular:serve:production"
             }
-          }
-        },
-        "deploy": {
-          "builder": "@netlify-builder/deploy:deploy",
-          "options": {
-            "outputPath": "dist/ImUdith",
-            "netlifyToken": "c92b4d17096c4ebf443861e30fea60bb7dc39b7e9745f9aa18714535b0827de2",
-            "siteId": "c2e6504a-e57c-47ff-8e16-7ffdbbfb57f8"
           }
         }
       }
-    }
-  },
-  "defaultProject": "ImUdith"
+    }},
+  "defaultProject": "personal-portfoli-angular"
 }
