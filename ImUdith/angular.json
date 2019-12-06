@@ -122,8 +122,17 @@
               "devServerTarget": "personal-portfoli-angular:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/personal-portfoli-angular",
+            "netlifyToken": "",
+            "siteId": "be7b0e30-6f01-4fee-8b55-2a3aba10c512"
+          }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "personal-portfoli-angular"
 }
