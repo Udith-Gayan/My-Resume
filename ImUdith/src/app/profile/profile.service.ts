@@ -116,4 +116,6 @@ export class ProfileService {
     // return this.http.get(this.baseUrl + 'exprience');
     return this.exprienceData;
   }
+
+  contactus(model: any): any {}  // Implement
 }
