@@ -5,7 +5,7 @@ import { SnotifyService } from 'ng-snotify';
 import { Model } from './contact-form';
 import './../../../assets/js/smtp.js';
 
-import { EmailValidator, FormControlDirective } from '@angular/forms';
+import { EmailValidator, FormControlDirective, FormControl } from '@angular/forms';
 declare let Email: any;
 
 
@@ -54,7 +54,7 @@ export class ContactComponent implements OnInit {
   // }
 
 
-onSubmit(f: FormControlDirective) {
+onSubmit(f: FormControl) {
 
   console.log('form submitted;');
   console.log(this.model.message);
