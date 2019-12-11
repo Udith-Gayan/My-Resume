@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class ProfileService {
-  //baseUrl = environment.baseUrl;
+  baseUrl = environment.baseUrl;
 
   constructor(
     private http: HttpClient

@@ -1,3 +1,4 @@
+
 <div class="section" id="contact">
         <div class="cc-contact-information" style="background-image: url('assets/images/contact.jpg');">
           <div class="container">
@@ -9,7 +10,7 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="card-body">
-                          <form name="form" (ngSubmit)="f.form.valid ; f.resetForm()" #f="ngForm" novalidate>
+                          <form name="form" (ngSubmit) = "onSubmit(f);" #f="ngForm" >
                             <div class="p pb-3">
                               <strong>Feel free to contact me </strong>
                             </div>
@@ -61,7 +62,7 @@
                             </div>
                             <div class="row">
                               <div class="col">
-                                <button class="btn btn-primary" type="submit" disabled>Send</button><p style="color: rgb(255, 115, 0);">(Under Construction)</p>    <!-- Button disabled for construction-->
+                                <button class="btn btn-primary" type="submit" >Send</button>
                               </div>
                             </div>
                           </form>

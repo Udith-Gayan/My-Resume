@@ -6,8 +6,8 @@ import { SnotifyPosition } from 'ng-snotify';
 
 export const environment = {
   production: false,
-  //baseUrl : `${window.location.protocol}//${window.location.hostname}/portfolio/`,
-  //baseUrl : `http://localhost:4200/`,
+  baseUrl : `${window.location.protocol}//${window.location.hostname}/portfolio/`,
+  // baseUrl : `http://localhost:4200/`,
 
   snotifyConfig : {
     showProgressBar: true,
