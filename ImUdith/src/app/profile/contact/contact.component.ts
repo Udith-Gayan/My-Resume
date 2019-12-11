@@ -5,7 +5,7 @@ import { SnotifyService } from 'ng-snotify';
 import { Model } from './contact-form';
 import './../../../assets/js/smtp.js';
 
-import { EmailValidator, FormControlDirective, FormControl } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 declare let Email: any;
 
 
@@ -28,7 +28,7 @@ export class ContactComponent implements OnInit {
 
 
   // snotifyConfig = environment.snotifyConfig;
-  emailll: any;
+
 
 
   constructor(
@@ -38,7 +38,7 @@ export class ContactComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-   this.emailll = Email;
+  
   }
 
   // contact() {
