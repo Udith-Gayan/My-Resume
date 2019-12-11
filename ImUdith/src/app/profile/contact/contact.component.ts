@@ -5,7 +5,7 @@ import { SnotifyService } from 'ng-snotify';
 import { Model } from './contact-form';
 import './../../../assets/js/smtp.js';
 
-import { FormControl } from '@angular/forms';
+
 declare let Email: any;
 
 
