@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../profile.service';
 import { SnotifyService } from 'ng-snotify';
-import { environment } from '../../../environments/environment';
+// import { environment } from '../../../environments/environment';
 import { Model } from './contact-form';
 import './../../../assets/js/smtp.js';
 
@@ -27,7 +27,7 @@ export class ContactComponent implements OnInit {
 
 
 
-  snotifyConfig = environment.snotifyConfig;
+  // snotifyConfig = environment.snotifyConfig;
   emailll: any;
 
 
@@ -41,17 +41,17 @@ export class ContactComponent implements OnInit {
    this.emailll = Email;
   }
 
-  contact() {
-    this.profile.contactus(this.model).subscribe(data => {
-      if (data.status) {
-        this.snotify.success(data.message, 'Success', this.snotifyConfig);
-      } else {
-        this.snotify.warning(data.message, 'Warning', this.snotifyConfig);
-      }
-    }, err => {
-      this.snotify.error('Something went wrong. Try again later.', 'Error', this.snotifyConfig);
-    });
-  }
+  // contact() {
+  //   this.profile.contactus(this.model).subscribe(data => {
+  //     if (data.status) {
+  //       this.snotify.success(data.message, 'Success', this.snotifyConfig);
+  //     } else {
+  //       this.snotify.warning(data.message, 'Warning', this.snotifyConfig);
+  //     }
+  //   }, err => {
+  //     this.snotify.error('Something went wrong. Try again later.', 'Error', this.snotifyConfig);
+  //   });
+  // }
 
 
 onSubmit(f: FormControlDirective) {
