@@ -77,7 +77,7 @@ onSubmit(f: NgForm) {
                    <b>~End of Message.~</b> `
     }).then(
       message => {alert(message);
-                  f.reset(); }
+                  f.resetForm(); }
     );
 
 }
