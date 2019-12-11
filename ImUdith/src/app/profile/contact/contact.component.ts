@@ -54,7 +54,7 @@ export class ContactComponent implements OnInit {
   // }
 
 
-onSubmit(f:any) {
+onSubmit() {
 
   console.log('form submitted;');
   console.log(this.model.message);
@@ -76,7 +76,7 @@ onSubmit(f:any) {
                    <b>~End of Message.~</b> `
     }).then(
       message => {alert(message);
-                  f.resetForm(); }
+                  }
     );
 
 }
