@@ -4,6 +4,7 @@ import { SnotifyService } from 'ng-snotify';
 // import { environment } from '../../../environments/environment';
 import { Model } from './contact-form';
 import './../../../assets/js/smtp.js';
+import { NgForm } from '@angular/forms';
 
 
 declare let Email: any;
@@ -54,7 +55,7 @@ export class ContactComponent implements OnInit {
   // }
 
 
-onSubmit() {
+onSubmit(f: NgForm) {
 
   console.log('form submitted;');
   console.log(this.model.message);
@@ -76,7 +77,7 @@ onSubmit() {
                    <b>~End of Message.~</b> `
     }).then(
       message => {alert(message);
-                  }
+                  f.reset(); }
     );
 
 }
