@@ -1,0 +1,31 @@
+/* unvisited link */
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+
+}
+
+/* visited link */
+a:visited {
+
+}
+
+/* mouse over link */
+a:hover {
+  color: rgba(8, 26, 140, 0.932);
+  cursor:pointer;
+  font-weight:800;
+}
+
+.img {
+  position: relative!important;
+  float: left!important;
+  width:  500px!important;
+  height: 137px!important;
+  background-position: 50% 50%!important;
+  background-repeat:   no-repeat!important;
+  background-size:     cover!important;
+}
