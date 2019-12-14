@@ -20,15 +20,6 @@ export class ContactComponent implements OnInit {
   model: Model = new Model();
 
 
-  // constructor() {}
-
-  // ngOnInit() {
-  //    }
-
-
-
-
-  // snotifyConfig = environment.snotifyConfig;
 
 
 
