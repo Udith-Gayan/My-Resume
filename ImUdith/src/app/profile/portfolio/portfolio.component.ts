@@ -43,7 +43,11 @@ export class PortfolioComponent implements OnInit {
            {postURL: 'https://medium.com/@udith.indrakantha/send-emails-without-a-server-side-code-with-angular-e227c3e62dbd',
            imgURL: 'https://miro.medium.com/max/800/0*_vui1Vw7BYbbvnrE.png',
            title: 'Send Emails without a server-side code with Angular',
-           description: 'Without any server-side code hosted on a server, you can send emails through your Angular application with ...'}
+           description: 'Without any server-side code hosted on a server, you can send emails through your Angular application with ...'},
+           {postURL: 'https://medium.com/@udith.indrakantha/mvc-architecture-as-a-software-architecture-e86073ac2411',
+           imgURL: 'https://miro.medium.com/max/1313/1*ZwAV1NANJrJrdteG57gVzQ.jpeg',
+           title: 'MVC Architecture as a Software Architecture',
+           description: 'A software architecture is the way that different functioning modules or the components are interrelated in a system to achieve  ...'}
 
            ];
 
