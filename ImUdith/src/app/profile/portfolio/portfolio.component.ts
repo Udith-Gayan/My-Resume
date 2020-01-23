@@ -47,7 +47,11 @@ export class PortfolioComponent implements OnInit {
            {postURL: 'https://medium.com/@udith.indrakantha/mvc-architecture-as-a-software-architecture-e86073ac2411',
            imgURL: 'https://miro.medium.com/max/1313/1*ZwAV1NANJrJrdteG57gVzQ.jpeg',
            title: 'MVC Architecture as a Software Architecture',
-           description: 'A software architecture is the way that different functioning modules or the components are interrelated in a system to achieve  ...'}
+           description: 'A software architecture is the way that different functioning modules or the components are interrelated in a system to achieve  ...'},
+           {postURL: 'https://medium.com/javascript-in-plain-english/how-to-intercept-the-http-requests-in-angular-2a67df423020',
+           imgURL: 'https://miro.medium.com/max/6830/1*PEIeGIaKBS6nrNfULdCylw.jpeg',
+           title: 'How to Intercept the HTTP Requests in Angular',
+           description: 'Since Angular 4.3 , a new feature has been coming to modify all outgoing http requests and incoming responses globally.  ...'}
 
            ];
 
