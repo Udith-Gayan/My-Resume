@@ -1,0 +1,34 @@
+<h1>Submit Articles:</h1>
+
+<form #f="ngForm" (ngSubmit)="onSubmit()">
+    <p>
+        <label>Post URL:</label>&nbsp;&nbsp;
+        <input type="text"
+            [(ngModel)]="article.postURL" [ngModelOptions]="{standalone: true}" required>
+    </p>
+    <p>
+        <label>Image URL:</label>&nbsp;&nbsp;
+        <input type="text"
+            [(ngModel)]="article.imgURL" [ngModelOptions]="{standalone: true}" required>
+    </p>
+    <p>
+      <label>Description:</label>&nbsp;&nbsp;
+      <input type="Description"
+          [(ngModel)]="article.description" [ngModelOptions]="{standalone: true}" required>
+  </p>
+  <p>
+    <label>Title:</label>&nbsp;&nbsp;
+    <input type="text"
+        [(ngModel)]="article.title" [ngModelOptions]="{standalone: true}" required>
+</p>
+
+
+<p>
+  <label>Password:</label>&nbsp;&nbsp;
+  <input type="text"
+      [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" required>
+</p>
+    <p>
+        <button type="submit" [disabled]="!f.valid">Submit</button>
+    </p>
+</form>
