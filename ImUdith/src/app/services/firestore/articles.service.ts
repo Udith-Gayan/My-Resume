@@ -18,7 +18,7 @@ export class ArticlesService {
 
 
 // ad new article to firestore
-createArticle(article: Object) {
+createArticle(article: any) {
   return this.firestore.collection('articles').add(article);
 }
 

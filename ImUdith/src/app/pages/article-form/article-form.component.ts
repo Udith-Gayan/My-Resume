@@ -12,7 +12,7 @@ import { Router, RouterModule } from '@angular/router';
 export class ArticleFormComponent implements OnInit {
 
   article: Object = {};
-  user: Object = {password:''};
+  user: any = {};
   constructor(private articleService: ArticlesService, private router: Router, private rmodule: RouterModule ) { }
 
   ngOnInit() {
