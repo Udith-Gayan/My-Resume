@@ -11,7 +11,7 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class ArticleFormComponent implements OnInit {
 
-  article: Object = {};
+  article: any = {};
   user: any = {};
   constructor(private articleService: ArticlesService, private router: Router, private rmodule: RouterModule ) { }
 
