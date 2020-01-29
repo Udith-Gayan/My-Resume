@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ArticlesService } from './../../services/firestore/articles.service';
+import { Article } from './article.model';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
-  constructor() { }
+  constructor(private articleService: ArticlesService) { }
 
   isClicked = false;
   limit = 8;
+  articles = Article[0];
 
   public blogs = [{postURL: 'https://medium.com/@udith.indrakantha/say-bye-bye-to-annoying-getters-setters-shorten-your-java-code-with-lombok-d656ae66e163',
             imgURL: 'https://miro.medium.com/max/1166/1*rOXn3DjfrIac2Zc658p-mg.png',
@@ -58,13 +61,33 @@ export class PortfolioComponent implements OnInit {
   blogLength = this.blogs.length;
 
   ngOnInit() {
+    // Get article data from forestore
+    this.articleService.getArticles().subscribe(res => {
 
-  }
+      // This filters data from the messy response
+      this.articles = res.map(e => {
+        return {
+          id: e.payload.doc.id,
+          ...e.payload.doc.data()
+        } as Article;
+    } );
+
+      // tslint:disable-next-line: forin
+      for (let arti of this.articles) {
+        this.blogs.push(arti);
+    }
+
+
+
+
+  } );
+}
 
   showMore() {
     this.limit = this.blogs.length;
     this.isClicked = true;
     console.log('moreee');
+    console.log(this.articles);
 
   }
 

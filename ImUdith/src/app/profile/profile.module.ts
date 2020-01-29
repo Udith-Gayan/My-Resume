@@ -15,9 +15,11 @@ import { ReferenceComponent } from './reference/reference.component';
 import { ContactComponent } from './contact/contact.component';
 import { NgxSpinnerModule } from '../../../node_modules/ngx-spinner';
 import { ProjectsComponent } from './projects/projects.component';
+import { RouterModule, Routes, ExtraOptions } from '@angular/router';
 
 @NgModule({
   imports: [
+    RouterModule,
     CommonModule,
     FormsModule,
     SnotifyModule,
