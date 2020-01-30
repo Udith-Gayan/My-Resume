@@ -68,12 +68,12 @@ export class PortfolioComponent implements OnInit {
       this.articles = res.map(e => {
         return {
           id: e.payload.doc.id,
-          ...e.payload.doc.data()
+          ...(e.payload.doc.data() as object)
         } as Article;
     } );
 
       // tslint:disable-next-line: forin
-      for (let arti of this.articles) {
+      for (const arti of this.articles) {
         this.blogs.push(arti);
     }
 
