@@ -40,7 +40,7 @@ const config: ExtraOptions = {
     FormsModule,
     ProfileRoutingModule
   ],
-  providers: [AngularFirestore, RouterModule],    //providers: [AngularFirestore,  RouterModule],
+  providers: [AngularFirestore, RouterModule, AngularFireDatabaseModule],    //providers: [AngularFirestore,  RouterModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
