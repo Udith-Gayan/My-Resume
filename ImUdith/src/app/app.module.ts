@@ -37,7 +37,7 @@ const config: ExtraOptions = {
     ProfileModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule,
+   // AngularFireDatabaseModule,
     FormsModule,
     AngularFireStorageModule,
     ProfileRoutingModule
