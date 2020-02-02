@@ -8,6 +8,7 @@ import { ProfileModule } from './profile/profile.module';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireDatabaseModule} from '@angular/fire/database';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
@@ -40,7 +41,8 @@ const config: ExtraOptions = {
    // AngularFireDatabaseModule,
     FormsModule,
     AngularFireStorageModule,
-    ProfileRoutingModule
+    ProfileRoutingModule,
+    AngularFirestoreModule
   ],
   providers: [AngularFirestore, RouterModule],    //providers: [AngularFirestore,  RouterModule],
   bootstrap: [AppComponent]
