@@ -36,11 +36,11 @@ const config: ExtraOptions = {
     ProfileModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule,
+   // AngularFireDatabaseModule,
     FormsModule,
     ProfileRoutingModule
   ],
-  providers: [AngularFirestore,  RouterModule],
+  providers: [AngularFirestore, RouterModule],    //providers: [AngularFirestore,  RouterModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
