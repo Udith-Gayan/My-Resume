@@ -14,6 +14,7 @@ import { environment } from '../environments/environment';
 import { ArticleFormComponent } from './pages/article-form/article-form.component';
 import {FormsModule} from '@angular/forms';
 import { ProfileRoutingModule } from './profile/profile-routing.module';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 const routes: Routes = [
   {
@@ -36,11 +37,12 @@ const config: ExtraOptions = {
     ProfileModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-   // AngularFireDatabaseModule,
+    AngularFireDatabaseModule,
     FormsModule,
+    AngularFireStorageModule,
     ProfileRoutingModule
   ],
-  providers: [AngularFirestore, RouterModule, AngularFireDatabaseModule],    //providers: [AngularFirestore,  RouterModule],
+  providers: [AngularFirestore, RouterModule],    //providers: [AngularFirestore,  RouterModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
