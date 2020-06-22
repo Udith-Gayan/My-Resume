@@ -16,6 +16,7 @@ import { ArticleFormComponent } from './pages/article-form/article-form.componen
 import {FormsModule} from '@angular/forms';
 import { ProfileRoutingModule } from './profile/profile-routing.module';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   {
@@ -42,7 +43,8 @@ const config: ExtraOptions = {
     FormsModule,
     AngularFireStorageModule,
     ProfileRoutingModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    BrowserAnimationsModule
   ],
   providers: [AngularFirestore, RouterModule],    //providers: [AngularFirestore,  RouterModule],
   bootstrap: [AppComponent]

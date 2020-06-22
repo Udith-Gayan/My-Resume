@@ -30,7 +30,7 @@ export class ContactComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-  
+
   }
 
   // contact() {
@@ -55,7 +55,7 @@ onSubmit(f: NgForm) {
     // SecureToken : 'ad93ff88-96e8-4e0b-aa1a-6e2ec939db66',
     Host : 'smtp.elasticemail.com',
     Username : 'udith.indrakantha@gmail.com',
-    Password : '5783dc73-acbe-4eba-b757-c053b4e1f9a2',
+    Password : '07B009F31674089853D8D654A365E11FDC62',
     To : 'udith.indrakantha@gmail.com',
     From : `udith.indrakantha@gmail.com`,
     Subject : this.model.subject,
@@ -67,8 +67,14 @@ onSubmit(f: NgForm) {
                    ${this.model.message} <br><br>
                    <b>~End of Message.~</b> `
     }).then(
-      message => {alert(message);
-                  f.resetForm(); }
+      message => {
+
+         if(message === 'OK')
+            alert( 'Successfully Sent!');
+         else
+          alert('Error: '+ message);
+
+          f.resetForm(); }, err => {alert(err); }
     );
 
 }

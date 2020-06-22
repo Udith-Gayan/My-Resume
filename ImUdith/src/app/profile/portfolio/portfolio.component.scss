@@ -40,7 +40,7 @@ a:hover {
 }
 
 .bb {
-  width:89%;
+  width:100%;
   border: none;
   background-color: rgba(11, 17, 42, 0.055);
   color: rgb(26, 10, 79);
@@ -56,4 +56,14 @@ a:hover {
 .bb:hover {
   background-color: rgba(11, 17, 42, 0.809);
   color: white;
+}
+
+
+.row {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  justify-content: center;
 }
