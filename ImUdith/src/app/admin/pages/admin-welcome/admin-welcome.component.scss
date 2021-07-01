@@ -1,0 +1,44 @@
+.main {
+    width: 100vw;
+    height: 100vh;
+    // background-color: aqua;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.content-area {
+    height: 100%;
+    width: 100%;
+    background-color: beige;
+    padding-top: 10%;
+}
+
+div.mypic{
+    background-color: aqua;
+    width: 160px;
+    height: 210px;
+    overflow: hidden;
+    border-radius: 10%;
+    float: left;
+
+    img {
+        width: 150px;
+        height: 200px;
+        transform: translateX(10px);
+        transform: scale(1.7);
+    }
+
+}
+
+div.right-box {
+    height: 210px;
+    // width: 50%;
+    max-width: 100%;
+    min-width: 170px;
+
+    margin-left: 130px;
+
+    border-radius: 30px;
+
+    background-color: aquamarine;
+}

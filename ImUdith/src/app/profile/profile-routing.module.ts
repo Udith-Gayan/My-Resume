@@ -5,8 +5,14 @@ import { ArticleFormComponent } from './../pages/article-form/article-form.compo
 
 
 const routes: Routes = [
-  {path: 'admin/admin', component: ArticleFormComponent },
-  { path: '**' ,  redirectTo: '/'}
+  {path: 'admin/admin', 
+  component: ArticleFormComponent },
+  {path: 'admin',
+  loadChildren: () => import('./../admin/admin.module').then(m => m.AdminModule) },
+  {
+    path: '**',
+    redirectTo: '/'
+  }
 ];
 
 @NgModule({
@@ -18,3 +24,6 @@ const routes: Routes = [
 
 })
 export class ProfileRoutingModule { }
+
+
+

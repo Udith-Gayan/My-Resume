@@ -14,9 +14,11 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { ArticleFormComponent } from './pages/article-form/article-form.component';
 import {FormsModule} from '@angular/forms';
-import { ProfileRoutingModule } from './profile/profile-routing.module';
+import { ProfileRoutingModule } from './profile/profile-routing.module';    // Go to this for routing
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { AdminModule } from './admin/admin.module';
 
 const routes: Routes = [
   {
@@ -35,7 +37,7 @@ const config: ExtraOptions = {
     ArticleFormComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes, config),
+    RouterModule.forRoot(routes, config),     // Go to ProfileRoutingModule for routing
     ProfileModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
@@ -44,7 +46,8 @@ const config: ExtraOptions = {
     AngularFireStorageModule,
     ProfileRoutingModule,
     AngularFirestoreModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AdminModule
   ],
   providers: [AngularFirestore, RouterModule],    //providers: [AngularFirestore,  RouterModule],
   bootstrap: [AppComponent]

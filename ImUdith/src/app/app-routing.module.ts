@@ -4,9 +4,11 @@ import { ArticleFormComponent } from './pages/article-form/article-form.componen
 
 
 const routes: Routes = [
-  {path: 'admin/admin', component: ArticleFormComponent },
-  { path: '**' ,  redirectTo: '/'}
-];   // ArticleFormComponent
+  {path: 'admin/admin', component: ArticleFormComponent },  // ArticleFormComponent
+  {path: '/adminpage',
+  loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
+  { path: '**' ,  redirectTo: '/'}   // Wildcard route to same page
+];   
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
