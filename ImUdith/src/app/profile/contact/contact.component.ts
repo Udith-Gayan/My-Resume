@@ -30,7 +30,7 @@ export class ContactComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
+    
   }
 
   // contact() {
