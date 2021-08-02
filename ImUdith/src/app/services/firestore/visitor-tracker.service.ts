@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { environment } from '../../../environments/environment';
-import { runInThisContext } from 'vm';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +15,8 @@ export class VisitorTrackerService {
   sharedDate = this.last_visited_date.asObservable();
 
 
-  constructor(private firestore: AngularFirestore) { }
+  constructor(private firestore: AngularFirestore) {
+  }
 
   getVisitorCount(): Observable<number>{
     return this.sharedCount;
@@ -27,9 +27,7 @@ export class VisitorTrackerService {
   }
 
   // this increases the visitor count by 1 and call the other method t osave it in backend
-  markNewVisit() {
-    this.retrievePastRecords();
-
+  private markNewVisit() {
     this.visitor_count.next(this.visitor_count.getValue() + 1);
     
     //Create new object to save in firebase
@@ -37,15 +35,17 @@ export class VisitorTrackerService {
     this.updateNewCountonFirestore(newObj);
   }
 
-  private retrievePastRecords() {
+  retrievePastRecords() {
     this.firestore.collection(environment.firebaseCollections.visitorsTracker)
                   .doc(environment.firebaseDocsIDs.visitorsTracker)
-                  .get().subscribe(res =>{
+                  .get().subscribe(res => {
                     this.visitor_count.next(res.get('count'));
                     this.last_visited_date.next(res.get('last_visited_date'));
+                    this.markNewVisit();
                   }, error => {
                     console.log('error occured while retrieving the tracker details');
-                  });
+                  }
+    );
   }
 
   private updateNewCountonFirestore(newValuesObj){

@@ -17,7 +17,6 @@ import {FormsModule} from '@angular/forms';
 import { ProfileRoutingModule } from './profile/profile-routing.module';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { VisitorCounterComponent } from './common-components/visitor-counter/visitor-counter.component';
 
 const routes: Routes = [
   {
@@ -33,8 +32,8 @@ const config: ExtraOptions = {
 @NgModule({
   declarations: [
     AppComponent,
-    ArticleFormComponent,
-    VisitorCounterComponent],
+    ArticleFormComponent
+  ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes, config),
@@ -49,6 +48,7 @@ const config: ExtraOptions = {
     BrowserAnimationsModule
   ],
   providers: [AngularFirestore, RouterModule],    //providers: [AngularFirestore,  RouterModule],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: []
 })
 export class AppModule { }
