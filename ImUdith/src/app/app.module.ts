@@ -32,7 +32,8 @@ const config: ExtraOptions = {
 @NgModule({
   declarations: [
     AppComponent,
-    ArticleFormComponent],
+    ArticleFormComponent
+  ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes, config),
@@ -47,6 +48,7 @@ const config: ExtraOptions = {
     BrowserAnimationsModule
   ],
   providers: [AngularFirestore, RouterModule],    //providers: [AngularFirestore,  RouterModule],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: []
 })
 export class AppModule { }

@@ -1,0 +1,38 @@
+
+a.total-visit-count-btn {
+    background-color: rgb(255, 255, 255); 
+    transform: scale(1.32); 
+    font-weight: 600; 
+    color: rgb(21, 70, 95);
+}
+
+div.total-visit-count{
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    height: 100%; 
+    width: 100%; 
+
+    p:nth-child(1) {
+        align-items: center; 
+        margin: 0;
+    }
+
+    p:nth-child(2) {   //Visited Label
+        align-items: center; 
+        margin: 0;
+        font-size: 10px;
+        margin-top: -7px;
+    }
+}
+
+p.total-visit-count-title, p.total-visit-count-value {
+    font-size: 10px;
+}
+
+@media screen and (max-width:768px) {
+    a.total-visit-count-btn {
+        display: none;
+    }
+}
