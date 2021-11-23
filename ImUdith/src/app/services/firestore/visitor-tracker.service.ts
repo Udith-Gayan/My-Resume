@@ -49,13 +49,15 @@ export class VisitorTrackerService {
   }
 
   private updateNewCountonFirestore(newValuesObj){
-    this.firestore.collection(environment.firebaseCollections.visitorsTracker)
-                  .doc(environment.firebaseDocsIDs.visitorsTracker)
-                  .update(newValuesObj).then(res =>{
-                      console.log('Successfully updated the visit tracker.')
-                  }).catch(reason => {
-                    console.log('error occured while updating the tracker details');
-                  });
+    if(environment.production) {
+      this.firestore.collection(environment.firebaseCollections.visitorsTracker)
+                    .doc(environment.firebaseDocsIDs.visitorsTracker)
+                    .update(newValuesObj).then(res =>{
+                        console.log('Successfully updated the visit tracker.')
+                    }).catch(reason => {
+                      console.log('error occured while updating the tracker details');
+                    });
+    }
   }
 }
 
