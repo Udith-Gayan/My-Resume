@@ -31,6 +31,12 @@ export const environment = {
 
   firebaseDocsIDs: {
     visitorsTracker: 'visitor_counter_doc'
+  },
+
+  assetsConfig: {
+    googleDriveAssets : {
+      myCVFileID: '1JgNqTC-Gq-17R15pdDUNRIF3q_uk7wPD'
+    }
   }
 
 };
